@@ -14,6 +14,7 @@ BLUE = (0, 0, 255)
 YELLOW = (255, 255, 0)
 BG_COLOR = pygame.Color(255, 255, 255)
 
+
 #set up screen size and surface size
 WINDOWWIDTH = 1200
 WINDOWHEIGHT = 650
