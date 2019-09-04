@@ -113,6 +113,9 @@ class Player(pygame.sprite.Sprite):
 
 
 def main_loop():
+    # preparing music settings
+    pygame.mixer.pre_init(44100,16,2,4096)
+    
     # initialize pygame and create window
     pygame.init()
     pygame.display.set_caption('Molecular Systems')
@@ -340,6 +343,11 @@ def player1win():
     draw_text(screen, "You Won!", 80, 300, 300, GREEN)
     draw_text(screen, "They Won", 80, 900, 300, BLUE)
 
+    # Play background music
+    pygame.mixer.music.load('music/GSTone.mp3')
+    pygame.mixer.music.set_volume(1)
+    pygame.mixer.music.play(-1)
+    
     waiting = True
     while waiting:
         pygame.time.Clock().tick(60)
@@ -349,14 +357,20 @@ def player1win():
             if event.type == pygame.KEYUP:
                 waiting = False
                 return
-
         pygame.display.update()
+    
+
 
 def player2win():
     flashbackground()
     screen.fill(WHITE)
     draw_text(screen, "They Won", 80, 300, 300, BLUE)
     draw_text(screen, "You Won!", 80, 900, 300, GREEN)
+    
+    # Play background music
+    pygame.mixer.music.load('music/GSTone.mp3')
+    pygame.mixer.music.set_volume(1)
+    pygame.mixer.music.play(-1)
 
     waiting = True
     while waiting:
