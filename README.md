@@ -16,6 +16,7 @@ program file/script output; it will tell you what to do. This will generate a nu
 4. Game set up - Open the game script and add the reference unit for each scale in the following lines of the script: 
 
       scale_left = Scale(5, 6, -22.5)
+      
       scale_right = Scale(23, 24, -25.7)
 
     In this example the reference unit is -22.5 for the left scale and -25.7 for the right scale. Note that it also defines the
